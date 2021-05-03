@@ -8,7 +8,7 @@ package-lock.json
 test/screenshots
 
 # production
-/dist
+#/dist
 /tmp
 /docs/tmp
 
@@ -30,7 +30,7 @@ yarn-error.log*
 # build
 coverage
 Procfile
-build
-dist
-lib
-es
+#build
+#dist
+#lib
+#es
