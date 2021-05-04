@@ -38,6 +38,7 @@ import { DeckContext } from './components/deck/deck';
 import useMousetrap from './hooks/use-mousetrap';
 import defaultTheme from './theme/default-theme';
 
+// hooks
 import useActionDispatcher from './hooks/use-action-dispatcher';
 import useAspectRatioFitting from './hooks/use-aspect-ratio-fitting';
 import useAutofillHeight from './hooks/use-autofill-height';
@@ -50,6 +51,10 @@ import usePresentation from './hooks/use-presentation';
 import useTouchControls from './hooks/use-touch-controls';
 import { useSlide, useCollectSlides } from './hooks/use-slides';
 import { useSteps, useCollectSteps } from './hooks/use-steps';
+
+// contexts
+import { slideContext } from './components/slide/slide';
+import { deckContext } from './components/deck/deck';
 
 export {
   Appear,
@@ -103,5 +108,7 @@ export {
   useCollectSlides,
   useSteps,
   useCollectSteps,
-  useTouchControls
+  useTouchControls,
+  slideContext,
+  deckContext
 };
