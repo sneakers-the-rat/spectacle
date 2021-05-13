@@ -44,6 +44,7 @@ import useAspectRatioFitting from './hooks/use-aspect-ratio-fitting';
 import useAutofillHeight from './hooks/use-autofill-height';
 import useBroadcastChannel from './hooks/use-broadcast-channel';
 import useDeckReducer from './hooks/use-deck-state';
+import { GOTO_FINAL_STEP } from './hooks/use-deck-state';
 import { useToggleFullScreen } from './hooks/use-full-screen';
 import useKeyboardControls from './hooks/use-keyboard-controls';
 import useLocationSync from './hooks/use-location-sync';
@@ -110,5 +111,6 @@ export {
   useCollectSteps,
   useTouchControls,
   SlideContext,
-  DeckContext
+  DeckContext,
+  GOTO_FINAL_STEP
 };
