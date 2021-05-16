@@ -54,8 +54,6 @@ import { useSlide, useCollectSlides } from './hooks/use-slides';
 import { useSteps, useCollectSteps } from './hooks/use-steps';
 
 // contexts
-import { SlideContext } from './components/slide/slide';
-import { DeckContext } from './components/deck/deck';
 
 export {
   Appear,
@@ -110,7 +108,5 @@ export {
   useSteps,
   useCollectSteps,
   useTouchControls,
-  SlideContext,
-  DeckContext,
   GOTO_FINAL_STEP
 };

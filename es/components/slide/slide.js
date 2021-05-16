@@ -101,6 +101,7 @@ export var AnimatedDiv = styled(animated.div)(_templateObject4(), function (_ref
 export default function Slide(_ref3) {
   var userProvidedId = _ref3.id,
       children = _ref3.children,
+      transition = _ref3.transition,
       backgroundColor = _ref3.backgroundColor,
       backgroundImage = _ref3.backgroundImage,
       backgroundOpacity = _ref3.backgroundOpacity,
@@ -247,25 +248,15 @@ export default function Slide(_ref3) {
   }, [willEnter, activeView, pendingView, finalStepIndex, commitTransition]);
   var target = useMemo(function () {
     if (isPassed) {
-      return [{
-        transform: STAGE_RIGHT
-      }, {
-        display: 'none'
-      }];
+      return transition[0];
     }
 
     if (isActive) {
-      return {
-        transform: CENTER_STAGE,
-        display: 'unset'
-      };
+      return transition[1];
     }
 
     if (isUpcoming) {
-      return {
-        transform: STAGE_LEFT,
-        display: 'none'
-      };
+      return transition[2];
     }
 
     return {
@@ -335,6 +326,7 @@ export default function Slide(_ref3) {
 Slide.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
+  transition: PropTypes.array,
   backgroundColor: PropTypes.string,
   backgroundImage: PropTypes.string,
   backgroundOpacity: PropTypes.number,
@@ -348,6 +340,16 @@ Slide.propTypes = {
 };
 Slide.defaultProps = {
   textColor: 'primary',
+  transition: [{
+    transform: STAGE_RIGHT,
+    display: 'none'
+  }, {
+    transform: CENTER_STAGE,
+    display: 'unset'
+  }, {
+    transform: STAGE_LEFT,
+    display: 'none'
+  }],
   backgroundColor: 'tertiary',
   backgroundOpacity: 1,
   backgroundPosition: 'center',

@@ -72657,6 +72657,7 @@ var AnimatedDiv = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default
 function Slide(_ref3) {
   var userProvidedId = _ref3.id,
       children = _ref3.children,
+      transition = _ref3.transition,
       backgroundColor = _ref3.backgroundColor,
       backgroundImage = _ref3.backgroundImage,
       backgroundOpacity = _ref3.backgroundOpacity,
@@ -72803,25 +72804,15 @@ function Slide(_ref3) {
   }, [willEnter, activeView, pendingView, finalStepIndex, commitTransition]);
   var target = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(function () {
     if (isPassed) {
-      return [{
-        transform: STAGE_RIGHT
-      }, {
-        display: 'none'
-      }];
+      return transition[0];
     }
 
     if (isActive) {
-      return {
-        transform: CENTER_STAGE,
-        display: 'unset'
-      };
+      return transition[1];
     }
 
     if (isUpcoming) {
-      return {
-        transform: STAGE_LEFT,
-        display: 'none'
-      };
+      return transition[2];
     }
 
     return {
@@ -72891,6 +72882,7 @@ function Slide(_ref3) {
 Slide.propTypes = {
   id: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
   className: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
+  transition: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.array,
   backgroundColor: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
   backgroundImage: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
   backgroundOpacity: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
@@ -72904,6 +72896,16 @@ Slide.propTypes = {
 };
 Slide.defaultProps = {
   textColor: 'primary',
+  transition: [{
+    transform: STAGE_RIGHT,
+    display: 'none'
+  }, {
+    transform: CENTER_STAGE,
+    display: 'unset'
+  }, {
+    transform: STAGE_LEFT,
+    display: 'none'
+  }],
   backgroundColor: 'tertiary',
   backgroundOpacity: 1,
   backgroundPosition: 'center',
@@ -74391,7 +74393,7 @@ var useTouchControls = function useTouchControls(_ref) {
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! exports provided: Appear, Deck, Slide, CodePane, Box, FlexBox, Grid, Image, FullSizeImage, OrderedList, Quote, Heading, ListItem, UnorderedList, Text, Link, CodeSpan, Notes, Progress, FullScreen, Markdown, MarkdownSlideSet, MarkdownSlide, MarkdownPreHelper, SpectacleLogo, Table, TableCell, TableRow, TableHeader, TableBody, mdxComponentMap, DeckContext, SlideContext, removeNotes, isolateNotes, indentNormalizer, defaultTheme, useMousetrap, useActionDispatcher, useAspectRatioFitting, useAutofillHeight, useBroadcastChannel, useDeckReducer, useToggleFullScreen, useKeyboardControls, useLocationSync, usePresentation, useSlide, useCollectSlides, useSteps, useCollectSteps, useTouchControls */
+/*! exports provided: Appear, Deck, Slide, CodePane, Box, FlexBox, Grid, Image, FullSizeImage, OrderedList, Quote, Heading, ListItem, UnorderedList, Text, Link, CodeSpan, Notes, Progress, FullScreen, Markdown, MarkdownSlideSet, MarkdownSlide, MarkdownPreHelper, SpectacleLogo, Table, TableCell, TableRow, TableHeader, TableBody, mdxComponentMap, DeckContext, SlideContext, removeNotes, isolateNotes, indentNormalizer, defaultTheme, useMousetrap, useActionDispatcher, useAspectRatioFitting, useAutofillHeight, useBroadcastChannel, useDeckReducer, useToggleFullScreen, useKeyboardControls, useLocationSync, usePresentation, useSlide, useCollectSlides, useSteps, useCollectSteps, useTouchControls, GOTO_FINAL_STEP */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -74506,6 +74508,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _hooks_use_deck_state__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./hooks/use-deck-state */ "./src/hooks/use-deck-state.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "useDeckReducer", function() { return _hooks_use_deck_state__WEBPACK_IMPORTED_MODULE_23__["default"]; });
 
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GOTO_FINAL_STEP", function() { return _hooks_use_deck_state__WEBPACK_IMPORTED_MODULE_23__["GOTO_FINAL_STEP"]; });
+
 /* harmony import */ var _hooks_use_full_screen__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./hooks/use-full-screen */ "./src/hooks/use-full-screen.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "useToggleFullScreen", function() { return _hooks_use_full_screen__WEBPACK_IMPORTED_MODULE_24__["useToggleFullScreen"]; });
 
@@ -74549,6 +74553,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // hooks
 
 
 
@@ -74561,6 +74566,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+ // contexts
 
 
 
