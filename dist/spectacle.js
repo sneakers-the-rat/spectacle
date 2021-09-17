@@ -72235,7 +72235,8 @@ function PresenterMode(props) {
     ref: setNotePortalNode,
     fontFamily: _utils_constants__WEBPACK_IMPORTED_MODULE_9__["SYSTEM_FONT"],
     lineHeight: "1.5em",
-    fontSize: "1.5vw",
+    fontSize: 'notesSize',
+    color: 'notesColor',
     padding: 15
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_5__["PreviewColumn"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_deck_deck__WEBPACK_IMPORTED_MODULE_2__["default"], {
     notePortalNode: notePortalNode,

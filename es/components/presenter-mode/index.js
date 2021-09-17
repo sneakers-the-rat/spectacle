@@ -118,7 +118,8 @@ export default function PresenterMode(props) {
     ref: setNotePortalNode,
     fontFamily: SYSTEM_FONT,
     lineHeight: "1.5em",
-    fontSize: "1.5vw",
+    fontSize: 'notesSize',
+    color: 'notesColor',
     padding: 15
   }))), /*#__PURE__*/React.createElement(PreviewColumn, null, /*#__PURE__*/React.createElement(Deck, {
     notePortalNode: notePortalNode,
