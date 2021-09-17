@@ -98,7 +98,8 @@ export default function PresenterMode(props) {
             ref={setNotePortalNode}
             fontFamily={SYSTEM_FONT}
             lineHeight="1.5em"
-            fontSize="1.5vw"
+            fontSize={'notesSize'}
+            color={'notesColor'}
             padding={15}
           />
         </NotesContainer>
