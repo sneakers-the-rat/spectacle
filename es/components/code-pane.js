@@ -189,5 +189,6 @@ CodePane.propTypes = {
   language: propTypes.string.isRequired,
   children: propTypes.string.isRequired,
   stepIndex: propTypes.number,
-  theme: propTypes.object
+  theme: propTypes.object,
+  width: propTypes.number
 };

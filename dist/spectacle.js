@@ -70471,7 +70471,8 @@ CodePane.propTypes = {
   language: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
   children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
   stepIndex: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
-  theme: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+  theme: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  width: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number
 };
 
 /***/ }),
