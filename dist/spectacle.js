@@ -70371,7 +70371,9 @@ function CodePane(_ref2) {
       rawCodeString = _ref2.children,
       stepIndex = _ref2.stepIndex,
       _ref2$theme = _ref2.theme,
-      syntaxTheme = _ref2$theme === void 0 ? react_syntax_highlighter_dist_cjs_styles_prism_vs_dark__WEBPACK_IMPORTED_MODULE_6___default.a : _ref2$theme;
+      syntaxTheme = _ref2$theme === void 0 ? react_syntax_highlighter_dist_cjs_styles_prism_vs_dark__WEBPACK_IMPORTED_MODULE_6___default.a : _ref2$theme,
+      _ref2$width = _ref2.width,
+      width = _ref2$width === void 0 ? 1366 : _ref2$width;
   var numberOfSteps = react__WEBPACK_IMPORTED_MODULE_0__["useMemo"](function () {
     if (highlightRanges.length === 0 || // Prevents e.g. [null, null] to be used to count the number of steps
     checkForInvalidValues(highlightRanges)) {
@@ -70442,7 +70444,7 @@ function CodePane(_ref2) {
      * default theme with no valid values.
      */
     var _theme$size$width = theme.size.width,
-        width = _theme$size$width === void 0 ? 1366 : _theme$size$width,
+        width = _theme$size$width === void 0 ? width : _theme$size$width,
         _theme$space = theme.space,
         space = _theme$space === void 0 ? [0, 0, 0] : _theme$space,
         _theme$fontSizes$mono = theme.fontSizes.monospace,
