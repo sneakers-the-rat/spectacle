@@ -55,7 +55,8 @@ export default function CodePane({
   language,
   children: rawCodeString,
   stepIndex,
-  theme: syntaxTheme = dark
+  theme: syntaxTheme = dark,
+  width = 1366
 }) {
   const numberOfSteps = React.useMemo(() => {
     if (
@@ -137,7 +138,7 @@ export default function CodePane({
      * default theme with no valid values.
      */
     const {
-      size: { width = 1366 },
+      size: { width = width },
       space = [0, 0, 0],
       fontSizes: { monospace = '20px' }
     } = theme;
